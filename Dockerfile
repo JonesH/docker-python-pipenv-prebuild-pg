@@ -9,6 +9,6 @@ RUN     pip3.6 install pipenv  \
 ONBUILD ADD Pipfile         /Pipfile
 ONBUILD ADD Pipfile.lock    /Pipfile.lock
 ONBUILD RUN pipenv install --dev --deploy --system \
-        &&  apk del --purge gcc musl-dev python3-dev postgresql-dev
+        &&  apk del --purge gcc musl-dev python3-dev
 
 CMD ["python"]
